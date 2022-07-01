@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add: React, ReactDOM y Babel -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- -->
+    <title>Using React V2</title>
+</head>
+<body>
+    <div id="Messages" style="border: solid;"></div>
+
+    <script type="text/babel">
+
+        function Saludo(props){
+            return(
+                <h1>Hello {props.name} {props.lastName}</h1>                
+            );
+        }
+
+        function PersonName(){
+            return(
+                <div>
+                    <Saludo name="John" lastName="Lennon"/>
+                    <Saludo name="Paul" lastName="McCartney"/>
+                    <Saludo name="George" lastName="Harrison"/>
+                    <Saludo name="Ringo" lastName="Starr"/>                    
+                </div>
+            );
+        }
+
+        ReactDOM.render(<PersonName/>, document.querySelector("#Messages"));
+    </script>
+    
+</body>
+</html>
