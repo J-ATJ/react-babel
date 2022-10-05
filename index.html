@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,31 +12,38 @@
     <!-- -->
     <title>Using React V2</title>
 </head>
+
 <body>
-    <div id="Messages" style="border: solid;"></div>
+    <div style="display: flex; border: solid 1px gray;">
+        <div id="Messages"
+            style="color: #265cb3; background-color: #d9e9e9; display: inline-block; margin: 0 auto; padding: 10px 30px;">
+        </div>
+    </div>
+
 
     <script type="text/babel">
 
-        function Saludo(props){
-            return(
-                <h1>Hello {props.name} {props.lastName}</h1>                
+        function Saludo(props) {
+            return (
+                <h1>Hello {props.name} {props.lastName}</h1>
             );
         }
 
-        function PersonName(){
-            return(
+        function PersonName() {
+            return (
                 <div>
-                    <Saludo name="John" lastName="Lennon"/>
-                    <Saludo name="Paul" lastName="McCartney"/>
-                    <Saludo name="George" lastName="Harrison"/>
-                    <Saludo name="Ringo" lastName="Starr"/>
-                    <Saludo name="Stuart" lastName="Sutcliffe"/>                     
+                    <Saludo name="John" lastName="Lennon" />
+                    <Saludo name="Paul" lastName="McCartney" />
+                    <Saludo name="George" lastName="Harrison" />
+                    <Saludo name="Ringo" lastName="Starr" />
+                    <Saludo name="Stuart" lastName="Sutcliffe" />
                 </div>
             );
         }
 
-        ReactDOM.render(<PersonName/>, document.querySelector("#Messages"));
+        ReactDOM.render(<PersonName />, document.querySelector("#Messages"));
     </script>
-    
+
 </body>
+
 </html>
